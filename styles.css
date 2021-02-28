@@ -1,0 +1,201 @@
+body{
+    max-width: 960px;
+    margin:200px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+.spinner{
+    width:100px;
+    height: 100px;
+    position: relative;
+}
+.spinner div{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border:8px solid transparent;
+    border-top-color: #36C5F0;
+    border-radius: 50%;
+    animation: spinnerOne 1s linear infinite;
+}
+.spinner div:nth-child(2){
+    border:8px solid transparent;
+    border-left-color: #2EB67D;
+    animation: spinnerTwo 1s linear infinite;
+}
+.spinner div:nth-child(3){
+    border:8px solid transparent;
+    border-bottom-color: #E01E5A;
+    animation: spinnerThree 1s linear infinite;
+}
+.spinner div:nth-child(4){
+    border:8px solid transparent;
+    border-right-color: #ECB22E;
+    animation: spinnerFour 1s linear infinite;
+}
+
+@keyframes spinnerOne{
+    0%{
+        transform:rotate(0deg);
+        border-width: 50px;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-width: 10px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 1px;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-width: 10px;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-width: 50px;
+    }
+}
+@keyframes spinnerTwo{
+    0%{
+        transform:rotate(0deg);
+        border-width: 50px;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-width: 10px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 1px;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-width: 10px;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-width: 50px;
+    }
+}
+@keyframes spinnerThree{
+    0%{
+        transform:rotate(0deg);
+        border-width: 50px;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-width: 10px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 1px;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-width: 10px;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-width: 50px;
+    }
+}
+@keyframes spinnerFour{
+    0%{
+        transform:rotate(0deg);
+        border-width: 50px;
+    }
+    25%{
+        transform: rotate(90deg);
+        border-width: 10px;
+    }
+    50%{
+        transform: rotate(180deg);
+        border-width: 1px;
+    }
+    75%{
+        transform: rotate(270deg);
+        border-width: 10px;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-width: 50px;
+    }
+}
+
+/* bouncing balls */
+.bouncer{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+}
+.bouncer div{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4285F4;
+    animation: bouncer 0.5s cubic-bezier(.19,.57,.3,.98) infinite alternate;
+}
+.bouncer div:nth-child(2){
+    animation-delay: 0.1s;
+    background: #DB4437;
+}
+.bouncer div:nth-child(3){
+    animation-delay: 0.2s;
+    background: #F4B400;
+}
+.bouncer div:nth-child(4){
+    animation-delay: 0.3s;
+    background: #0F9D58;
+
+}
+@keyframes bouncer{
+    from{ transform: translateY(0);}
+    to{transform: translateY(-100px);}
+}
+
+
+/* fipping squares */
+.flipper{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    perspective: 200px;
+}
+.flipper div{
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background: #00A4EF;
+    animation: flipper 2s linear infinite;
+    transform-origin:right bottom;
+}
+ .flipper div:nth-child(2){
+    animation-delay: 0.5s;
+    opacity: 1;
+    background: #FFB900;
+}
+
+.flipper div:nth-child(3){
+    animation-delay: 1s;
+    opacity: 1;
+    background: #7FBA00;
+}
+.flipper div:nth-child(4){
+    animation-delay: 1.5s;
+    opacity: 1;
+    background:#F25022;
+} 
+@keyframes flipper{
+    0%{transform: rotateX(0) rotateY(0);}
+    25%{transform: rotateX(0) rotateY(180deg);}
+    50%{transform: rotateX(180deg) rotateY(180deg);}
+    75%{transform: rotateX(180deg) rotateY(0);}
+    100%{transform: rotateX(0) rotateY(0);}
+
+}
